@@ -144,7 +144,7 @@ const Home = ({
             <div className="space-y-[38.99px]">
               <div>
                 <h2 className="text-[#FBBF24] text-3xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
-                  Consumers are tired.
+                  Consumers are overwhelmed.
                 </h2>
                 <p className="text-[#d1d0c5] text-2xl md:text-[35.09px] font-normal font-lexend leading-[1.2] md:leading-[46.78px] tracking-[0.03em]">
                   Millions should switch to solar, but they don't know, don't
@@ -311,7 +311,7 @@ const Home = ({
             </div>
           </div>
 
-          {/* Newsletter Section */}
+          {/* Newsletter Section - Temporarily disabled
           <div className="space-y-7 text-center">
             <h2 className="text-amber-400 text-3xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
               Newsletter
@@ -322,21 +322,27 @@ const Home = ({
             <form
               onSubmit={async (e) => {
                 e.preventDefault();
+                console.log("Form submitted");
                 const form = e.target as HTMLFormElement;
                 const email = (
                   form.elements.namedItem("email") as HTMLInputElement
                 ).value;
+                console.log("Email value:", email);
                 if (email) {
                   try {
+                    console.log("Attempting to subscribe with email:", email);
                     const success = await subscribeToNewsletter(email);
+                    console.log("Subscription result:", success);
                     if (success) {
                       setIsSubmitted(true);
                       form.reset();
                     } else {
                       console.error("Subscription failed");
+                      alert("Failed to subscribe. Please try again.");
                     }
                   } catch (error) {
                     console.error("Newsletter error:", error);
+                    alert("An error occurred. Please try again.");
                   }
                 }
               }}
@@ -388,6 +394,7 @@ const Home = ({
               </div>
             </form>
           </div>
+          */}
         </div>
       </div>
     </MotionDiv>
