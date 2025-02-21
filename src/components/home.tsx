@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import Hero from "./Hero";
+import ValueProposition from "./ValueProposition";
+import Testimonials from "./Testimonials";
 import { motion, AnimatePresence } from "framer-motion";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -136,58 +138,8 @@ const Home = ({
         ctaText={heroCtaText}
         onCtaClick={onHeroCtaClick}
       />
-      {/* Content Section */}
-      <div className="px-4 md:px-8 lg:px-16 py-12 mt-24 bg-[#262626]">
-        <div className="max-w-[912px] mx-auto md:text-left text-center">
-          <div className="space-y-[219px] font-lexend max-w-[600px] md:max-w-full mx-auto">
-            {/* Problem Statement */}
-            <div className="space-y-[38.99px]">
-              <div>
-                <h2 className="text-[#FBBF24] text-3xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
-                  Consumers are overwhelmed.
-                </h2>
-                <p className="text-[#d1d0c5] text-2xl md:text-[35.09px] font-normal font-lexend leading-[1.2] md:leading-[46.78px] tracking-[0.03em]">
-                  Millions should switch to solar, but they don't know, don't
-                  care, don't trust, and don't act.
-                </p>
-                <p className="text-[#d1d0c5] text-2xl md:text-[35.09px] font-normal font-lexend leading-[1.2] md:leading-[46.78px] tracking-[0.03em] mt-[38.99px]">
-                  And who can blame them? Solar is a major construction project.
-                  They have chaotic lives and short attention spans.
-                </p>
-              </div>
-            </div>
+      <ValueProposition />
 
-            {/* Solution Introduction */}
-            <div className="space-y-[38.99px]">
-              <h2 className="text-[#FBBF24] text-3xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
-                Enter WattBot.
-              </h2>
-            </div>
-
-            {/* For Consumers Section */}
-            <div>
-              <h2 className="text-[#FBBF24] text-3xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
-                For consumers: WattBot is the best "solar calculator".
-              </h2>
-              <p className="text-[#d1d0c5] text-2xl md:text-[35.09px] font-normal font-lexend leading-[1.2] md:leading-[46.78px] tracking-[0.03em]">
-                A fun, free and fact-based way to find out if solar can work.
-                Not boring, not pushy.
-              </p>
-            </div>
-
-            {/* For Industry Section */}
-            <div className="mt-[219px]">
-              <h2 className="text-[#FBBF24] text-3xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
-                For providers: WattBot is a powerful conversion booster.
-              </h2>
-              <p className="text-[#d1d0c5] text-2xl md:text-[35.09px] font-normal font-lexend leading-[1.2] md:leading-[46.78px] tracking-[0.03em]">
-                A digital tool that turns every consumer touchpoint into a
-                chance to attract, educate, qualify, or nurture.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Three Column Image Section */}
       <div className="px-4 md:px-8 lg:px-16 py-16 md:py-32 bg-[#262626] overflow-hidden">
         <div className="max-w-[912px] mx-auto">
@@ -227,15 +179,16 @@ const Home = ({
           </div>
         </div>
       </div>
+      <Testimonials />
       {/* CTA Section */}
       <div className="px-4 md:px-8 lg:px-16 py-16 md:py-32 bg-[#262626]">
         <div className="max-w-[912px] mx-auto space-y-16 md:space-y-[219px]">
           {/* Installer CTA */}
           <div className="space-y-7 text-center">
-            <h2 className="text-amber-400 text-3xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
-              Are you a solar installer?
+            <h2 className="text-amber-400 text-2xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
+              Are you a licensed residential solar installer?
             </h2>
-            <h3 className="text-[#d1d0c5] text-2xl md:text-[35.09px] font-normal font-lexend leading-[1.2] md:leading-[46.78px] tracking-[0.03em]">
+            <h3 className="text-[#d1d0c5] text-lg md:text-[35.09px] font-normal font-lexend leading-[1.2] md:leading-[46.78px] tracking-[0.03em] px-4 md:px-0">
               Get a head start on selling season with America's Best Solar
               Calculator.
             </h3>
@@ -253,13 +206,13 @@ const Home = ({
 
           {/* Partnership CTA */}
           <div className="space-y-7 text-center">
-            <h2 className="text-amber-400 text-3xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
-              Are you an Industry Partner?
+            <h2 className="text-amber-400 text-2xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-[0.03em]">
+              Do you serve solar installers?
             </h2>
-            <h3 className="text-[#d1d0c5] text-2xl md:text-[35.09px] font-normal font-lexend leading-[1.2] md:leading-[46.78px] tracking-[0.03em]">
+            <h3 className="text-[#d1d0c5] text-lg md:text-[35.09px] font-normal font-lexend leading-[1.2] md:leading-[46.78px] tracking-[0.03em] px-4 md:px-0">
               We're working with financiers, distributors, OEMs, design/proposal
               platforms, installer networks and non-profits. If you fall in
-              those camps, we'd love to talk!
+              those camps, we'd love to talk.
             </h3>
             <div className="flex justify-center">
               <Button
@@ -296,14 +249,14 @@ const Home = ({
             <div className="text-center text-amber-400 text-3xl md:text-5xl font-black font-lexend leading-[1.2] md:leading-[56px] tracking-wider">
               Follow Us
             </div>
-            <div className="flex justify-center items-center gap-4 md:gap-[61.71px] px-4">
-              {socialLinks.map((social) => (
+            <div className="grid grid-cols-3 gap-6 md:flex md:justify-center md:items-center md:gap-[61.71px] px-4 max-w-[400px] md:max-w-none mx-auto">
+              {socialLinks.map((social, index) => (
                 <a
                   key={social.name}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-[60px] h-[60px] md:w-[106.47px] md:h-[106.47px] relative overflow-hidden hover:opacity-80 transition-opacity"
+                  className="w-full max-w-[60px] aspect-square md:w-[106.47px] md:h-[106.47px] relative overflow-hidden hover:opacity-80 transition-opacity mx-auto"
                 >
                   {social.icon}
                 </a>

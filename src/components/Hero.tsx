@@ -37,7 +37,7 @@ const Hero = () => {
         {/* Right Column - Phone Mockup */}
         <div className="flex flex-col justify-center items-center gap-y-1 relative phone-container">
           <motion.div
-            className="w-[280px] md:w-[396px] cursor-pointer relative z-10"
+            className="w-[320px] md:w-[500px] cursor-pointer relative z-10"
             animate={{
               scale: isClicked ? 0.8 : 1,
             }}
@@ -48,7 +48,7 @@ const Hero = () => {
             }}
           >
             <img
-              src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//final_gifbrewery_23MB.gif"
+              src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//Sunshine%20Energy%20Co.gif"
               alt="Solar Calculator App"
               className="w-full rounded-[64px]"
             />
@@ -57,25 +57,25 @@ const Hero = () => {
           <AnimatePresence>
             {isClicked && (
               <motion.div
-                initial={{ opacity: 0, scale: 1 }}
-                animate={{ opacity: 1, scale: 0.8 }}
-                exit={{ opacity: 0, scale: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="absolute inset-0 backdrop-blur-md bg-black/95 rounded-[64px] z-20
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] backdrop-blur-sm bg-black/60 rounded-[64px] z-20
                   flex flex-col items-center justify-center gap-2"
               >
                 <motion.h3
-                  initial={{ scale: 1 }}
-                  animate={{ scale: 0.8 }}
-                  exit={{ scale: 1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                   className="text-white text-[35.09px] font-normal font-lexend leading-[46.78px] tracking-[0.03em]"
                 >
                   Want a Demo?
                 </motion.h3>
                 <motion.div
-                  initial={{ scale: 1 }}
-                  animate={{ scale: 0.8 }}
-                  exit={{ scale: 1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                 >
                   <Button
                     className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black font-['Lexend Deca'] text-[33.52px] px-8 py-3 rounded-[13.41px] h-auto w-auto"

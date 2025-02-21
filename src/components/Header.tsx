@@ -63,9 +63,11 @@ const Header = ({
 
             <div className="flex md:items-center gap-2 md:gap-4">
               <div className="hidden md:flex items-center gap-4">
-                <span className="text-white text-lg">Want a Demo?</span>
+                <span className="text-white text-[35.09px] font-normal font-lexend leading-[46.78px] tracking-[0.03em]">
+                  Want a Demo?
+                </span>
                 <Button
-                  className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black px-8 py-3 rounded-[13.41px] transition-colors"
+                  className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black font-['Lexend Deca'] text-2xl md:text-[33.52px] px-6 md:px-8 py-2 md:py-3 rounded-[13.41px] h-auto w-auto"
                   onClick={() =>
                     window.open("https://cal.com/dhanur/wattbot-demo", "_blank")
                   }
@@ -76,7 +78,7 @@ const Header = ({
               <div className="md:hidden flex flex-col items-center justify-center h-16 gap-1">
                 <span className="text-white text-sm">Want a Demo?</span>
                 <Button
-                  className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black px-4 py-1.5 rounded-[8px] transition-colors text-sm"
+                  className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black font-['Lexend Deca'] text-lg md:text-2xl px-4 py-1.5 rounded-[13.41px] h-auto w-auto"
                   onClick={() =>
                     window.open("https://cal.com/dhanur/wattbot-demo", "_blank")
                   }
