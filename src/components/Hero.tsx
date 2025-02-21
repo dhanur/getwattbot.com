@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="min-h-[80vh] w-full bg-[#262626] px-6 md:px-8 lg:px-16 flex items-center py-12 md:py-16 overflow-x-hidden">
-      <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+    <section className="min-h-[80vh] w-full bg-[#262626] px-6 md:px-8 lg:px-16 flex items-center py-12 md:py-24 overflow-x-hidden">
+      <div className="max-w-[1120px] mx-auto grid md:grid-cols-2 gap-6 md:gap-16 items-center">
         {/* Left Column - Logo */}
         <div className="flex justify-center">
-          <div className="relative w-[280px] md:w-[225px]">
+          <div className="relative w-[224px] md:w-[320px]">
             <img
               src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//ws-top.gif"
               alt="Building America's Best Solar Calculator"
@@ -19,7 +19,7 @@ const Hero = () => {
         {/* Right Column - Phone Mockup */}
         <div className="flex flex-col justify-center items-center gap-y-1 relative phone-container">
           <motion.div
-            className="w-[340px] md:w-[281px] relative z-10"
+            className="w-[320px] md:w-[360px] relative z-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
