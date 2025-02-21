@@ -1,81 +1,65 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const ValueProposition = () => {
   return (
-    <section className="w-full bg-[#262626] px-4 md:px-8 lg:px-16 py-16 md:py-32 overflow-x-hidden">
-      <div className="max-w-[912px] mx-auto flex flex-col items-center gap-16 text-center">
+    <section className="w-full bg-[#262626] px-6 md:px-8 lg:px-16 py-12 md:py-18 overflow-x-hidden">
+      <div className="max-w-2xl mx-auto flex flex-col items-center gap-16 md:gap-18 text-center">
+        {/* Main Value Proposition */}
+        <div className="space-y-12 w-full">
+          {/* Title */}
+          <div className="space-y-3">
+            <h2 className="text-[#FBBF24] text-2xl md:text-3xl font-[900] font-lexend leading-[1.4] tracking-[0.03em]">
+              THE SOLAR CALCULATOR
+              <br />
+              DESIGNED TO CONVERT
+            </h2>
+            <h3 className="text-white text-xl md:text-xl font-normal font-lexend leading-[1.4] tracking-[0.03em] w-full px-4 md:px-0">
+              Transform every consumer interaction into an opportunity to
+              attract, educate, qualify, or nurture.
+            </h3>
+          </div>
+
+          {/* Phone Screenshot and Feature Tiles */}
+          <div className="flex justify-center items-center w-full">
+            <div className="flex items-center gap-4 md:gap-6">
+              <div>
+                <img
+                  src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//main-screenshot.png"
+                  alt="WattBot App Screenshot"
+                  className="w-[240px] md:w-[281px] h-auto rounded-[48px]"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//feature-tiles.png"
+                  alt="Feature Tiles"
+                  className="w-[90px] md:w-[100px] h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Problem Statement */}
-        <div className="space-y-4">
-          <h2 className="text-[#FBBF24] text-[28px] md:text-5xl font-black font-lexend leading-[1.4] md:leading-[56px] tracking-[0.03em]">
-            Consumers are overwhelmed.
+        <div className="space-y-3">
+          <h2 className="text-[#FBBF24] text-2xl md:text-3xl font-[900] font-lexend leading-[1.4] tracking-[0.03em]">
+            CONSUMERS ARE OVERWHELMED.
           </h2>
-          <h3 className="text-white text-[24px] md:text-[35.09px] font-normal font-lexend leading-[1.4] md:leading-[46.78px] tracking-[0.03em] max-w-[739px] px-4 md:px-0">
+          <h3 className="text-white text-xl md:text-xl font-normal font-lexend leading-[1.4] tracking-[0.03em] w-full px-4 md:px-0">
             Millions should switch to solar. But they don't know, don't care,
             don't trust, and don't act.
           </h3>
         </div>
 
         {/* Context */}
-        <div className="space-y-4">
-          <h2 className="text-[#FBBF24] text-[28px] md:text-5xl font-black font-lexend leading-[1.4] md:leading-[56px] tracking-[0.03em]">
-            And who can blame them?
+        <div className="space-y-3">
+          <h2 className="text-[#FBBF24] text-2xl md:text-3xl font-[900] font-lexend leading-[1.4] tracking-[0.03em]">
+            AND WHO CAN BLAME THEM?
           </h2>
-          <h3 className="text-white text-[24px] md:text-[35.09px] font-normal font-lexend leading-[1.4] md:leading-[46.78px] tracking-[0.03em] max-w-[739px] px-4 md:px-0">
-            They have chaotic lives and short attention spans. Solar is a major
-            construction project.
+          <h3 className="text-white text-xl md:text-xl font-normal font-lexend leading-[1.4] tracking-[0.03em] w-full px-4 md:px-0">
+            Solar is a major construction project. They have chaotic lives and
+            short attention spans.
           </h3>
-        </div>
-
-        {/* Solution Introduction */}
-        <h2 className="text-[#FBBF24] text-[28px] md:text-5xl font-black font-lexend leading-[1.4] md:leading-[56px] tracking-[0.03em]">
-          Enter WattBot.
-        </h2>
-
-        {/* Main Value Proposition */}
-        <div className="space-y-16">
-          {/* For Installers */}
-          <div className="space-y-4">
-            <h2 className="text-[#FBBF24] text-[28px] md:text-5xl font-black font-lexend leading-[1.4] md:leading-[56px] tracking-[0.03em]">
-              Designed to convert.
-            </h2>
-            <h3 className="text-white text-[24px] md:text-[35.09px] font-normal font-lexend leading-[1.4] md:leading-[46.78px] tracking-[0.03em] max-w-[739px] px-4 md:px-0">
-              Drive higher conversion by transforming every consumer interaction
-              into an opportunity to attract, educate, qualify, or nurture.
-            </h3>
-          </div>
-
-          {/* Phone Screenshot */}
-          <div className="flex justify-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.3 }}
-              whileInView={{
-                opacity: 1,
-                scale: 1,
-                transition: {
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 8,
-                  mass: 0.8,
-                },
-              }}
-              viewport={{
-                once: true,
-                margin: "-40% 0px -40% 0px",
-                amount: 0.4,
-              }}
-              whileHover={{
-                scale: 1.05,
-                transition: { type: "spring", bounce: 0.4 },
-              }}
-            >
-              <img
-                src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//main-screenshot.png"
-                alt="WattBot App Screenshot"
-                className="w-[320px] md:w-[500px] h-auto rounded-[64px]"
-              />
-            </motion.div>
-          </div>
         </div>
       </div>
     </section>

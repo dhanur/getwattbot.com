@@ -1,46 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "./ui/button";
+import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
-  // Touch interaction temporarily disabled
-  /*
-  const [isClicked, setIsClicked] = useState(false);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (!target.closest(".phone-container")) {
-        setIsClicked(false);
-      }
-    };
-
-    if (isClicked) {
-      document.addEventListener("click", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [isClicked]);
-  */
-
   return (
-    <section className="min-h-screen w-full bg-[#262626] px-4 md:px-8 lg:px-16 flex items-center py-20 md:py-0 overflow-x-hidden">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+    <section className="min-h-[80vh] w-full bg-[#262626] px-6 md:px-8 lg:px-16 flex items-center py-12 md:py-16 overflow-x-hidden">
+      <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12 items-center">
         {/* Left Column - Logo */}
         <div className="flex justify-center">
-          <img
-            src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//building%20america's%20best%20solar%20calculator.png"
-            alt="Building America's Best Solar Calculator"
-            className="w-[280px] md:w-[400px] h-auto"
-          />
+          <div className="relative w-[280px] md:w-[225px]">
+            <img
+              src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//ws-top.gif"
+              alt="Building America's Best Solar Calculator"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
 
         {/* Right Column - Phone Mockup */}
         <div className="flex flex-col justify-center items-center gap-y-1 relative phone-container">
           <motion.div
-            className="w-[320px] md:w-[500px] relative z-10"
+            className="w-[340px] md:w-[281px] relative z-10"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -49,50 +28,9 @@ const Hero = () => {
             <img
               src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//Sunshine%20Energy%20Co.gif"
               alt="Solar Calculator App"
-              className="w-full rounded-[64px]"
+              className="w-full rounded-[48px]"
             />
           </motion.div>
-
-          {/* Touch interaction temporarily disabled
-          <AnimatePresence>
-            {isClicked && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] backdrop-blur-sm bg-black/60 rounded-[64px] z-20
-                  flex flex-col items-center justify-center gap-2"
-              >
-                <motion.h3
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="text-white text-[35.09px] font-normal font-lexend leading-[46.78px] tracking-[0.03em]"
-                >
-                  Want a Demo?
-                </motion.h3>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
-                  <Button
-                    className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black font-['Lexend Deca'] text-[33.52px] px-8 py-3 rounded-[13.41px] h-auto w-auto"
-                    onClick={() =>
-                      window.open(
-                        "https://cal.com/dhanur/wattbot-demo",
-                        "_blank",
-                      )
-                    }
-                  >
-                    BOOK A CALL
-                  </Button>
-                </motion.div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-          */}
         </div>
       </div>
     </section>
