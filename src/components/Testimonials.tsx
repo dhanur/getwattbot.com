@@ -31,7 +31,7 @@ const Testimonials = () => {
   return (
     <section className="w-full bg-[#262626] px-4 md:px-8 lg:px-16 py-16 md:py-32">
       <div className="max-w-[912px] mx-auto">
-        <div className="flex flex-col gap-16 md:gap-24">
+        <div className="flex flex-col gap-12 md:gap-24">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -43,16 +43,16 @@ const Testimonials = () => {
                 delay: index * 0.2,
                 ease: [0.21, 0.47, 0.32, 0.98],
               }}
-              className="bg-[#323437] rounded-[10px] p-8 flex flex-col justify-between min-h-[300px] max-w-[600px] mx-auto w-full"
+              className="bg-[#323437] rounded-[10px] p-6 md:p-8 flex flex-col justify-between min-h-[250px] md:min-h-[300px] max-w-[600px] mx-auto w-full"
             >
-              <p className="text-white text-[35.09px] font-normal font-lexend leading-[46.78px] tracking-[0.03em] mb-8">
+              <p className="text-white text-[24px] md:text-[35.09px] font-normal font-lexend leading-[1.4] md:leading-[46.78px] tracking-[0.03em] mb-8">
                 {testimonial.quote}
               </p>
               <div>
-                <p className="text-[#FBBF24] text-[35.09px] font-black font-lexend leading-[46.78px] tracking-[0.03em]">
+                <p className="text-[#FBBF24] text-[28px] md:text-[35.09px] font-black font-lexend leading-[1.4] md:leading-[46.78px] tracking-[0.03em]">
                   {testimonial.author}
                 </p>
-                <p className="text-[#d1d0c5] text-[24px] font-normal font-lexend leading-[32px] tracking-[0.03em]">
+                <p className="text-[#FBBF24] text-[20px] md:text-[24px] font-normal font-lexend leading-[1.4] md:leading-[32px] tracking-[0.03em]">
                   {testimonial.role}
                 </p>
               </div>

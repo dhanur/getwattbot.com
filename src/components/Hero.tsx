@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 
 const Hero = () => {
+  // Touch interaction temporarily disabled
+  /*
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
@@ -21,6 +23,7 @@ const Hero = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, [isClicked]);
+  */
 
   return (
     <section className="min-h-screen w-full bg-[#262626] px-4 md:px-8 lg:px-16 flex items-center py-20 md:py-0 overflow-x-hidden">
@@ -37,15 +40,11 @@ const Hero = () => {
         {/* Right Column - Phone Mockup */}
         <div className="flex flex-col justify-center items-center gap-y-1 relative phone-container">
           <motion.div
-            className="w-[320px] md:w-[500px] cursor-pointer relative z-10"
-            animate={{
-              scale: isClicked ? 0.8 : 1,
-            }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsClicked(!isClicked);
-            }}
+            className="w-[320px] md:w-[500px] relative z-10"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
             <img
               src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets//Sunshine%20Energy%20Co.gif"
@@ -54,6 +53,7 @@ const Hero = () => {
             />
           </motion.div>
 
+          {/* Touch interaction temporarily disabled
           <AnimatePresence>
             {isClicked && (
               <motion.div
@@ -92,6 +92,7 @@ const Hero = () => {
               </motion.div>
             )}
           </AnimatePresence>
+          */}
         </div>
       </div>
     </section>

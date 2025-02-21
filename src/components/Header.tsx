@@ -44,10 +44,7 @@ const Header = ({
         >
           <div className="w-full max-w-[912px] mx-auto flex items-center justify-between">
             {/* Logo */}
-            <button
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="flex items-center gap-2 focus:outline-none"
-            >
+            <button className="flex items-center gap-2 focus:outline-none">
               <div className="relative rounded-full border-[4px] border-[#FBBF24] p-0 box-border w-16 h-16">
                 <img
                   src="https://loeugtlzrlveghrxgjuu.supabase.co/storage/v1/object/public/assets/bc-wr-yz.gif"
@@ -56,36 +53,35 @@ const Header = ({
                 />
               </div>
             </button>
-            <Sidebar
-              isOpen={isSidebarOpen}
-              onClose={() => setIsSidebarOpen(false)}
-            />
+            {/* Sidebar temporarily disabled */}
+            {/* <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} /> */}
 
-            <div className="flex md:items-center gap-2 md:gap-4">
-              <div className="hidden md:flex items-center gap-4">
-                <span className="text-white text-[35.09px] font-normal font-lexend leading-[46.78px] tracking-[0.03em]">
-                  Want a Demo?
-                </span>
-                <Button
-                  className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black font-['Lexend Deca'] text-2xl md:text-[33.52px] px-6 md:px-8 py-2 md:py-3 rounded-[13.41px] h-auto w-auto"
-                  onClick={() =>
-                    window.open("https://cal.com/dhanur/wattbot-demo", "_blank")
-                  }
-                >
-                  BOOK A CALL
-                </Button>
-              </div>
-              <div className="md:hidden flex flex-col items-center justify-center h-16 gap-1">
-                <span className="text-white text-sm">Want a Demo?</span>
-                <Button
-                  className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black font-['Lexend Deca'] text-lg md:text-2xl px-4 py-1.5 rounded-[13.41px] h-auto w-auto"
-                  onClick={() =>
-                    window.open("https://cal.com/dhanur/wattbot-demo", "_blank")
-                  }
-                >
-                  BOOK A CALL
-                </Button>
-              </div>
+            <div className="hidden md:flex items-center gap-4">
+              <span className="text-white text-2xl font-normal font-lexend">
+                Want a Demo?
+              </span>
+              <Button
+                className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black font-['Lexend Deca'] text-2xl px-6 py-2 rounded-[13.41px] h-auto w-auto"
+                onClick={() =>
+                  window.open("https://cal.com/dhanur/wattbot-demo", "_blank")
+                }
+              >
+                BOOK A CALL
+              </Button>
+            </div>
+
+            <div className="md:hidden flex flex-col items-center justify-center gap-1">
+              <span className="text-white text-sm font-normal font-lexend">
+                Want a Demo?
+              </span>
+              <Button
+                className="bg-[#C52159] hover:bg-[#C52159]/90 text-white font-black font-['Lexend Deca'] text-lg px-4 py-1.5 rounded-[13.41px] h-auto w-auto"
+                onClick={() =>
+                  window.open("https://cal.com/dhanur/wattbot-demo", "_blank")
+                }
+              >
+                BOOK A CALL
+              </Button>
             </div>
           </div>
         </motion.header>
