@@ -14,8 +14,8 @@ const ValueProposition = () => {
               DESIGNED TO CONVERT
             </h2>
             <h3 className="text-white text-xl md:text-xl font-normal font-lexend leading-[1.4] tracking-[0.03em] w-full px-4 md:px-0">
-              Transform every consumer interaction into an opportunity to
-              attract, educate, qualify, or nurture.
+              The absolute best product for residential solar installers to
+              educate and acquire customers.
             </h3>
           </div>
 
