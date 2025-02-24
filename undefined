@@ -1,0 +1,12 @@
+import Beta from "../../../pages/Beta";
+import { BrowserRouter } from "react-router-dom";
+
+const BetaStoryboard = () => {
+  return (
+    <BrowserRouter>
+      <Beta />
+    </BrowserRouter>
+  );
+};
+
+export default BetaStoryboard;
